@@ -5,13 +5,17 @@
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
 
- @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,900');
-
 html {
   font-weight: 400;
   font-style: normal;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  background-color: #444;
+  scroll-behavior: smooth;
+}
+
+.nodisplay{
+  display: none;
 }
 
 /**
@@ -19,7 +23,7 @@ html {
  */
 
 body {
-  margin: 0;
+  margin: 2em 20vw;
 }
 
 /* HTML5 display definitions
@@ -519,11 +523,9 @@ html {
   font-size: 62.5%;
 }
 body {
-  color: #444;
+  color: white;
   transition: all .4s .3s ease-in;
-}
-body,html{
-	min-height: 100vh;
-	overflow: hidden;
+  scroll-snap-type: mandatory;
+  -webkit-scroll-snap-points-y: repeat(100%);
 }
 
